@@ -1,0 +1,142 @@
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+body{
+
+     width: 100vw;
+     height: 100vh;
+
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+button {
+     cursor: pointer;
+     border: none;
+}
+
+.calculator{
+     border: 1px solid red;
+
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+
+     width: 300px;
+     height: 400px;
+
+     padding: 0.3rem 0.5rem 0.3rem 0.5rem;
+}
+.calculator .calculator-keys{
+     width: 100%;
+     height: 100%; 
+}
+
+.calculator .calculator-keys {
+
+     /* grid-template-columns: 25% 25% 25% 25%;*/
+     grid-template-rows: auto auto auto auto auto auto;
+
+     display: grid;
+     grid-template-areas: 
+          "clear-btn clear-btn clear-btn clear-btn"
+          "grid-operators grid-operators grid-operators grid-operators"
+          "number-list-1 number-list-1 number-list-1 grid-equal-btn"
+          "number-list-2 number-list-2 number-list-2 grid-equal-btn"
+          "number-list-3 number-list-3 number-list-3 grid-equal-btn"
+          "number-list-4 number-list-4 number-list-4 grid-equal-btn"
+     ;
+}
+
+.calculator .calculator-keys .grid-clear-btn{
+     grid-area: clear-btn;
+}
+
+.calculator .calculator-keys .grid-operators{
+     grid-area: grid-operators;
+}
+
+.calculator .calculator-keys .grid-equal-btn{
+     grid-area: grid-equal-btn;
+}
+
+.calculator .calculator-keys .grid-numbers-1{
+     grid-area: number-list-1;
+}
+
+.calculator .calculator-keys .grid-numbers-2{
+     grid-area: number-list-2;
+}
+
+.calculator .calculator-keys .grid-numbers-3{
+     grid-area: number-list-3;
+}
+
+.calculator .calculator-keys .grid-numbers-4{
+     grid-area: number-list-4;
+}
+
+/* Number Buttons Operators */
+.calculator .calculator-keys .clear-btn-group {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-around;
+
+     width: 100%;
+}
+.calculator .calculator-keys .btn-clear{
+     width: 100%;
+     height: 100%;
+}
+
+.calculator .calculator-keys .operations-btn-group {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+
+     width: 100%;
+}
+
+.calculator .calculator-keys .btn-operator{
+     width: 100%;
+     height: 100%;;
+}
+
+
+/* Number Buttons */
+.calculator .calculator-keys .numbers-group{
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+
+     width: 100%;
+}
+
+.calculator .calculator-keys .btn-number{
+     width: 100%;
+     height: 100%;
+}
+
+/* Equal Button */
+.calculator .calculator-keys .equal-btn{
+     width: 100%;
+     height: 100%;
+}
+
+/* calculator-display */
+.calculator .calculator-display {
+     width: 100%;
+     height: 4rem;
+
+     display: inline;
+     text-align: right;
+     padding-right: 0.2rem;
+     margin: 0.2rem;
+
+     border: 1px solid black;
+}
