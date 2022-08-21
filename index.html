@@ -6,46 +6,47 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Document</title>
      <link rel="stylesheet" href="styles.css">
+     <script src="script.js"></script>
 </head>
 <body>
      <div class="calculator">
-          <div class="calculator-display">
-               R$10,00
+          <div id="resultado" class="calculator-display">
+               
           </div>
-
+          
           <div class="calculator-keys">
                <div class="clear-btn-group grid-clear-btn">
-                    <button class="btn-clear">CE</button>
-                    <button class="btn-clear">C</button>
+                    <button class="btn-clear" id="btn" onclick="back()">CE</button>
+                    <button class="btn-clear" id="btn" onclick="clean()">C</button>
                </div>
                <div class="operations-btn-group grid-operators">
-                    <button class="btn-operator">+</button>
-                    <button class="btn-operator">-</button>
-                    <button class="btn-operator">/</button>
-                    <button class="btn-operator">*</button>
+                    <button class="btn-operator" id="btn" onclick="insert('+')">+</button>
+                    <button class="btn-operator" id="btn" onclick="insert('-')">-</button>
+                    <button class="btn-operator" id="btn" onclick="insert('/')">/</button>
+                    <button class="btn-operator" id="btn" onclick="insert('*')">*</button>
                </div>
                <div class="numbers-group list-1 grid-numbers-1">
-                    <button class="btn-number">7</button>
-                    <button class="btn-number">8</button>
-                    <button class="btn-number">9</button>
+                    <button class="btn-number" id="btn" onclick="insert('7')">7</button>
+                    <button class="btn-number" id="btn" onclick="insert('8')">8</button>
+                    <button class="btn-number" id="btn" onclick="insert('9')">9</button>
                </div>
                <div class="numbers-group list-2 grid-numbers-2">
-                    <button class="btn-number">4</button>
-                    <button class="btn-number">5</button>
-                    <button class="btn-number">6</button>
+                    <button class="btn-number" id="btn" onclick="insert('4')">4</button>
+                    <button class="btn-number" id="btn" onclick="insert('5')">5</button>
+                    <button class="btn-number" id="btn" onclick="insert('6')">6</button>
                </div>
                <div class="numbers-group list-3 grid-numbers-3">
-                    <button class="btn-number">1</button>
-                    <button class="btn-number">2</button>
-                    <button class="btn-number">3</button>
+                    <button class="btn-number" id="btn" onclick="insert('1')">1</button>
+                    <button class="btn-number" id="btn" onclick="insert('2')">2</button>
+                    <button class="btn-number" id="btn" onclick="insert('3')">3</button>
                </div>
                <div class="numbers-group list-4 grid-numbers-4">
-                    <button class="btn-number">0</button>
-                    <button class="btn-number">,</button>
-                    <button class="btn-number">.</button>
+                    <button class="btn-number" id="btn" onclick="insert('0')">0</button>
+                    <button class="btn-number" id="btn" onclick="insert(',')">,</button>
+                    <button class="btn-number" id="btn" onclick="insert('.')">.</button>
                </div>
                <div class="equal-btn grid-equal-btn">
-                    <button class="equal-btn">=</button>
+                    <button class="equal-btn" id="btn" onclick="calcular()">=</button>
                </div>
           </div>
      </div>

@@ -5,10 +5,8 @@
 }
 
 body{
-
      width: 100vw;
      height: 100vh;
-
      display: flex;
      justify-content: center;
      align-items: center;
@@ -17,24 +15,26 @@ body{
 button {
      cursor: pointer;
      border: none;
+     border: 1px solid gray;
 }
 
 .calculator{
-     border: 1px solid red;
-
+     border: 1px solid gray;
+     background: rgb(97,97,97);
+     background: linear-gradient(145deg, rgba(97,97,97,1) 0%, rgba(173,173,173,1) 35%, rgba(246,247,247,1) 100%);
      display: flex;
      flex-direction: column;
      justify-content: center;
      align-items: center;
-
      width: 300px;
      height: 400px;
-
      padding: 0.3rem 0.5rem 0.3rem 0.5rem;
+     border-radius: 10px;
 }
 .calculator .calculator-keys{
      width: 100%;
      height: 100%; 
+     
 }
 
 .calculator .calculator-keys {
@@ -51,14 +51,22 @@ button {
           "number-list-3 number-list-3 number-list-3 grid-equal-btn"
           "number-list-4 number-list-4 number-list-4 grid-equal-btn"
      ;
+
+     
+}
+
+.numbers-group{
+     background-color: white;
 }
 
 .calculator .calculator-keys .grid-clear-btn{
      grid-area: clear-btn;
+     
 }
 
 .calculator .calculator-keys .grid-operators{
      grid-area: grid-operators;
+     
 }
 
 .calculator .calculator-keys .grid-equal-btn{
@@ -86,8 +94,8 @@ button {
      display: flex;
      flex-direction: row;
      justify-content: space-around;
-
      width: 100%;
+     
 }
 .calculator .calculator-keys .btn-clear{
      width: 100%;
@@ -98,7 +106,6 @@ button {
      display: flex;
      flex-direction: row;
      justify-content: space-between;
-
      width: 100%;
 }
 
@@ -106,7 +113,6 @@ button {
      width: 100%;
      height: 100%;;
 }
-
 
 /* Number Buttons */
 .calculator .calculator-keys .numbers-group{
@@ -119,13 +125,22 @@ button {
 
 .calculator .calculator-keys .btn-number{
      width: 100%;
-     height: 100%;
+     height: 100%;     
+     background-color: white;
+}
+
+.calculator .calculator-keys :hover{
+     width: 100%;
+     height: 100%;     
+     background-color: gainsboro ;
+     color: gray;
 }
 
 /* Equal Button */
 .calculator .calculator-keys .equal-btn{
      width: 100%;
      height: 100%;
+     background-color: orangered;
 }
 
 /* calculator-display */
@@ -136,7 +151,17 @@ button {
      display: inline;
      text-align: right;
      padding-right: 0.2rem;
-     margin: 0.2rem;
-
+     
      border: 1px solid black;
+     background-color: black;
+     color: white;
+     padding-top: 5%;
+     font-weight: bold;
+     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+     font-size: 150%;
+
+     border-radius: 10px 10px 0px 0px;
+
 }
+
+
